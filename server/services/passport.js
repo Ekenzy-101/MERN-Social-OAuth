@@ -1,7 +1,8 @@
 const passport = require("passport");
 const { OAuth2Strategy: GoogleStrategy } = require("passport-google-oauth");
+const { Strategy: FacebookStrategy } = require("passport-facebook");
 
-const { GOOGLE_CONFIG } = require("../config");
+const { GOOGLE_CONFIG, FACEBOOK_CONFIG } = require("../config");
 const User = require("../model/user");
 
 module.exports = () => {
@@ -33,4 +34,5 @@ module.exports = () => {
 
   // Adding each OAuth provider's strategy to passport
   passport.use(new GoogleStrategy(GOOGLE_CONFIG, callback));
+  passport.use(new FacebookStrategy(FACEBOOK_CONFIG, callback));
 };

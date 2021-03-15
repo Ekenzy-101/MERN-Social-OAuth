@@ -10,6 +10,14 @@ export const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
     width: "100%",
   },
+  button: {
+    alignItems: "center",
+    display: "flex",
+    justifyContent: "center",
+    margin: "auto auto 1rem auto",
+    textTransform: "none",
+    minWidth: "15rem",
+  },
   legend: {
     marginBottom: "1rem",
     textAlign: "center",
@@ -17,17 +25,16 @@ export const useStyles = makeStyles((theme) => ({
   logo: {
     width: 30,
     height: 30,
+    borderRadius: 0,
     marginRight: 15,
   },
+  facebookBtn: {
+    backgroundColor: `#4267b2 !important`,
+    color: "#fff",
+  },
   googleBtn: {
-    alignItems: "center",
     backgroundColor: `#fff !important`,
-    border: "1px solid rgb(219, 219, 219)",
     color: "#262626",
-    display: "flex",
-    justifyContent: "center",
-    margin: "auto auto 1rem auto",
-    textTransform: "none",
   },
   wrapper: {
     width: "100%",

@@ -25,7 +25,8 @@ const main = async () => {
     if (err.name === "UnauthorizedError") {
       res.status(401).send("Invalid Token");
     } else {
-      next(err);
+      console.error(err);
+      res.status(500).send("Unexepected error");
     }
   });
 

@@ -1,5 +1,7 @@
 import { Avatar, Button, Paper, Typography } from "@material-ui/core";
+import { Facebook } from "@material-ui/icons";
 import React from "react";
+import clsx from "clsx";
 
 import { useStyles } from "./styles";
 import googleLogo from "../../utils/images/google.png";
@@ -18,7 +20,16 @@ const LoginPage = () => {
           Login in with any of your social account
         </Typography>
         <Button
-          className={classes.googleBtn}
+          className={clsx(classes.button, classes.facebookBtn)}
+          variant="contained"
+          onClick={() => handleClick("facebook")}
+        >
+          <Facebook color="#4267b2" className={classes.logo} />
+          Login with Facebook
+        </Button>
+        <Button
+          className={clsx(classes.button, classes.googleBtn)}
+          variant="contained"
           onClick={() => handleClick("google")}
         >
           <Avatar src={googleLogo} className={classes.logo} />

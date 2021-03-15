@@ -30,8 +30,9 @@ exports.GOOGLE_CONFIG = {
 exports.FACEBOOK_CONFIG = {
   clientID: process.env.FACEBOOK_KEY,
   clientSecret: process.env.FACEBOOK_SECRET,
-  profileFields: ["id", "emails", "name", "picture.width(250)"],
+  profileFields: ["id", "displayName", "photos", "emails"],
   callbackURL: facebookURL,
+  enableProof: true,
 };
 
 exports.GITHUB_CONFIG = {

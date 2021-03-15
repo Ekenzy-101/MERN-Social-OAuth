@@ -13,9 +13,17 @@ const googleAuth = passport.authenticate("google", {
   failureRedirect: redirectUrl,
 });
 
+const facebookAuth = passport.authenticate("facebook", {
+  session: false,
+  scope: ["profile", "email"],
+  failureRedirect: redirectUrl,
+});
+
 router.get("/google/callback", googleAuth, authController.google);
+router.get("/facebook/callback", facebookAuth, authController.facebook);
 
 router.get("/google", googleAuth);
+router.get("/facebook", facebookAuth);
 
 router.post("/login", checkExchangeToken, authController.login);
 
