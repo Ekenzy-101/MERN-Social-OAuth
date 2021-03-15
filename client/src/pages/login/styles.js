@@ -32,6 +32,10 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: `#4267b2 !important`,
     color: "#fff",
   },
+  githubBtn: {
+    backgroundColor: `#444444 !important`,
+    color: "#fff",
+  },
   googleBtn: {
     backgroundColor: `#fff !important`,
     color: "#262626",

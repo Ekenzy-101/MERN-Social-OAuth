@@ -1,5 +1,5 @@
 import { Avatar, Button, Paper, Typography } from "@material-ui/core";
-import { Facebook } from "@material-ui/icons";
+import { Facebook, GitHub } from "@material-ui/icons";
 import React from "react";
 import clsx from "clsx";
 
@@ -26,6 +26,14 @@ const LoginPage = () => {
         >
           <Facebook color="#4267b2" className={classes.logo} />
           Login with Facebook
+        </Button>
+        <Button
+          className={clsx(classes.button, classes.githubBtn)}
+          variant="contained"
+          onClick={() => handleClick("github")}
+        >
+          <GitHub color="#444444" className={classes.logo} />
+          Login with Github
         </Button>
         <Button
           className={clsx(classes.button, classes.googleBtn)}
